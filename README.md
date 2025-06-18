@@ -63,15 +63,6 @@ CourseCareers IT Support Student
 [GitHub Profile](https://github.com/brianrivera03)
 
 ---
-
-##  Notes
-
-- Must be run with local admin rights
-- Tested on Windows 10 and 11
-- You may need to allow script execution:
-```powershell
-#Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-
 ## Acknowledgments
 
 This project was developed by me as part of the CourseCareers IT Support program.
@@ -79,3 +70,11 @@ This project was developed by me as part of the CourseCareers IT Support program
 Throughout the process, I used OpenAI's ChatGPT as a supplemental resource, similar to how one might use documentation or a study partner. I asked questions when I got stuck, validated my actions, and used the tool to double-check syntax or troubleshoot unexpected behavior.
 
 All scripts, structure, and implementation decisions were written and executed by me.
+
+##  Notes
+
+- Must be run with local admin rights
+- Tested on Windows 10 and 11
+- You may need to allow script execution:
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
