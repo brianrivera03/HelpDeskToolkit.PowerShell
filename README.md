@@ -1,71 +1,81 @@
 #  Help Desk Support Toolkit (PowerShell)
 
-##  Summary
+## Project Overview
 
-This project is a PowerShell-based toolkit designed to automate and simplify common help desk tasks in a Windows environment. It simulates real-world scenarios entry-level IT professionals often face and demonstrates the ability to identify, resolve, and document common user issues.
+This project is a PowerShell-based toolkit designed to help IT support staff automate and streamline common troubleshooting tasks. It includes system diagnostics, network testing, login history retrieval, and temp file cleanup — all combined into a single master script.
 
-**Project Type:** Technical implementation & walkthrough  
-**Languages Used:** PowerShell  
-**Environments:** Windows 10 (tested), compatible with Windows 11  
-**Tools/Services:** PowerShell, Event Viewer, Windows command-line utilities
+This toolkit was created as part of the CourseCareers IT Support Program and is intended to demonstrate practical scripting skills for entry-level help desk roles.
 
 ---
 
-##  Included Scripts
+##  Features & Scripts
 
-| Script Name | Description |
-|-------------|-------------|
-| `Clean-Temp.ps1` | Deletes temporary files to improve system performance |
-| `System-Infor.ps1` | Gathers key system information into a log file |
-| `Network-Test.ps1` | Performs basic network tests (IP, DNS, ping) |
-| `Login-History.ps1` | Extracts successful login events from Event Viewer |
-| `RunToolKit.bat` | Runs all scripts and created the SupportLogs folder on the desktop |
-Each script is modular, documented, and designed for standalone use or combined into a larger help desk workflow.
+###  `Run-All-Toolkit.ps1`
+The main script that:
+- Creates a timestamped folder in `C:\SupportLogs`
+- Gathers system information
+- Runs network diagnostics (IP, ping, DNS)
+- Logs recent login history (Event ID 4624)
+- Clears temp files from the current user
+- Automatically opens the folder when finished
 
----
-
-##  Media
-
-### Clean Temp Files
-![Clean Temp Screenshot](media/clean-temp.png)
-
-### System Info Report Output
-![System Info Screenshot](media/system-info.png)
-
-### Network Test
-![Network Test Screenshot](media/network-test.png)
+###  `RunToolkit.bat`
+A batch file that launches the PowerShell script with proper execution policy and keeps the window open.
 
 ---
 
-##  Demonstration
+##  How to Run
 
-Each script includes:
-- Step-by-step instructions in the header comments
-- Sample output files in the `/output` folder
-- Screenshots of the script being executed
-- Descriptions of when and why you’d use each script as a technician
+### Method 1: From PowerShell ISE
+1. Open `Run-All-Toolkit.ps1` in PowerShell ISE
+2. Press `F5` to run
 
-> Example Use Case: A user reports their PC is slow → run `Clean-TempFiles.ps1` and `System-InfoReport.ps1` → document findings.
-
----
-
-## How to Use
-
-1. Clone this repo or download ZIP  
-2. Open PowerShell as Administrator  
-3. Run a script with `.\scriptname.ps1`  
-4. Follow any on-screen prompts or check output folders
-
->  Some scripts require administrator rights for full functionality.
+### Method 2: From Explorer (Double-click)
+1. Use the `RunToolkit.bat` file
+2. It will launch the toolkit and show output
 
 ---
 
-##  Why This Project
+##  Output Structure
 
-This toolkit shows my ability to:
-- Identify common Windows system issues  
-- Write and use PowerShell to automate repetitive tasks  
-- Document and communicate technical steps clearly  
-- Think like a real support technician
+All logs are saved in a folder like:
+C:\SupportLogs\2025-06-18_14-00-00\
+
+
+
 
 ---
+
+##  Technologies Used
+
+- PowerShell 5.1+
+- Batch (.bat) launcher
+- Event Viewer API
+- Windows environment variables
+- `$env:TEMP`, `Get-ComputerInfo`, `Resolve-DnsName`, etc.
+
+---
+
+##  Author
+
+**Brian Rivera**  
+CourseCareers IT Support Student  
+[GitHub Profile](https://github.com/brianrivera03)
+
+---
+
+##  Notes
+
+- Must be run with local admin rights
+- Tested on Windows 10 and 11
+- You may need to allow script execution:
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+## Acknowledgments
+
+This project was developed by me as part of the CourseCareers IT Support program.
+
+Throughout the process, I used OpenAI's ChatGPT as a supplemental resource, similar to how one might use documentation or a study partner. I asked questions when I got stuck, validated my actions, and used the tool to double-check syntax or troubleshoot unexpected behavior.
+
+All scripts, structure, and implementation decisions were written and executed by me.
