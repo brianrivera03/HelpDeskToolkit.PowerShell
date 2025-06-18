@@ -15,12 +15,11 @@ This project is a PowerShell-based toolkit designed to automate and simplify com
 
 | Script Name | Description |
 |-------------|-------------|
-| `Clean-TempFiles.ps1` | Deletes temporary files to improve system performance |
-| `System-InfoReport.ps1` | Gathers key system information into a log file |
-| `Network-Troubleshooter.ps1` | Performs basic network tests (IP, DNS, ping) |
+| `Clean-Temp.ps1` | Deletes temporary files to improve system performance |
+| `System-Infor.ps1` | Gathers key system information into a log file |
+| `Network-Test.ps1` | Performs basic network tests (IP, DNS, ping) |
 | `Login-History.ps1` | Extracts successful login events from Event Viewer |
-| `Reset-LocalPassword.ps1` | Resets a local user account password (requires admin) |
-
+| `RunToolKit.bat` | Runs all scripts and created the SupportLogs folder on the desktop |
 Each script is modular, documented, and designed for standalone use or combined into a larger help desk workflow.
 
 ---
