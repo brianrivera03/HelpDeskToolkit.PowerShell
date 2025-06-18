@@ -41,6 +41,15 @@ A batch file that launches the PowerShell script with proper execution policy an
 All logs are saved in a folder like:
 C:\SupportLogs\2025-06-18_14-00-00\
 
+## Example Screenshots
+
+| Script Running (.bat) | Output Folder | System Info |
+|------------------------|----------------|-------------|
+| ![BAT File](media/Batfile.png) | ![Output Folder](media/output-folder.png) | ![Sysinfo](media/sysinfo.png) |
+
+| IP Config | Ping Test |
+|-----------|-----------|
+| ![IP Config](media/ipconfig.png) | ![Ping](media/ping.png) |
 
 
 
