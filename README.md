@@ -70,7 +70,7 @@ CourseCareers IT Support Student
 - Tested on Windows 10 and 11
 - You may need to allow script execution:
 ```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+#Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## Acknowledgments
 
